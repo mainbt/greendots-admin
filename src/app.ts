@@ -6,14 +6,10 @@ import provider from './admin/auth-provider.js';
 import options from './admin/options.js';
 import initializeDb from './db/index.js';
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 const start = async () => {
   const app = express();
-
-  const db = await initializeDb();
-  
-  options.databases = [db.db]
 
   const admin = new AdminJS(options);
 
@@ -35,7 +31,7 @@ const start = async () => {
       secret: process.env.COOKIE_SECRET,
       saveUninitialized: true,
       resave: true,
-    },
+    }
   );
 
   app.use(admin.options.rootPath, router);

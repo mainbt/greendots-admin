@@ -3,7 +3,7 @@
     "jsx": "react",
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "target": "ES2021",
+    "target": "ESNext",
     "declaration": false,
     "removeComments": true,
     "emitDecoratorMetadata": false,
@@ -16,12 +16,8 @@
     "incremental": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/src/**/*"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["**/src/**/*"]
 }
